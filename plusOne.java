@@ -1,3 +1,5 @@
+import java.lang.*;
+
 class Solution {
     public int[] plusOne(int[] digits) {
         
@@ -13,20 +15,15 @@ class Solution {
             }
         }
         
-        
         // If number is larger than array size
         if(carry == 1){
             int[] ans = new int[digits.length+1];
             ans[0] = carry;
-            
-            for(int i=0; i<digits.length; i++){
-                ans[i+1] = digits[i]; 
-            }
+            System.arraycopy(digits, 0, ans, 1, digits.length);
             
             return ans;
         }
         
         return digits;
-        
     }
 }
