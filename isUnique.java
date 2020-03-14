@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class isUnique {
    
    public static boolean isUniqueBF(String s){
       for(int i=0; i<s.length(); i++){
